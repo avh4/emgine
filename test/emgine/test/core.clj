@@ -2,5 +2,21 @@
   (:use [emgine.core])
   (:use [clojure.test]))
 
-(deftest replace-me ;; FIXME: write
-  (is false "No tests have been written."))
+(def timer-model "TimerModel")
+
+(deftest simple-java-class
+  (is (=
+"public class TimerModel {
+}
+"
+      (java timer-model))))
+
+(deftest simple-objc-class
+  (is (=
+"@interface TimerModel : NSObject
+@end
+
+@implementation TimerModel
+@end
+"
+        (objc timer-model))))
