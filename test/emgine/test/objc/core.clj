@@ -2,8 +2,7 @@
   (:use [emgine.objc])
   (:use [emgine.test.helper])
   (:use [emgine.test.fixture.timer-model])
-  (:use [clojure.test]))
+  (:use [midje.sweet]))
 
-(deftest simple-objc-class
-  (is (= (file-contents "emgine/test/objc/TimerModel.m")
-         (objc timer-model))))
+(fact "about objective-c renderer"
+  (objc timer-model) => (file-contents "emgine/test/objc/TimerModel.m"))

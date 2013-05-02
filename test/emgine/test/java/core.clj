@@ -2,8 +2,7 @@
   (:use [emgine.java])
   (:use [emgine.test.helper])
   (:use [emgine.test.fixture.timer-model])
-  (:use [clojure.test]))
+  (:use [midje.sweet]))
 
-(deftest simple-java-class
-  (is (= (file-contents "emgine/test/java/TimerModel.java")
-         (java timer-model))))
+(fact "about java renderer"
+  (java timer-model) => (file-contents "emgine/test/java/TimerModel.java"))
