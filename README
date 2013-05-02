@@ -1,13 +1,9 @@
+[![Build Status](https://secure.travis-ci.org/avh4/emgine.png?branch=master)](http://travis-ci.org/avh4/emgine)
+
 # emgine
 
-FIXME: write description
-
-## Usage
-
-FIXME: write
+Multi-language code generation from clojure.
 
 ## License
 
-Copyright (C) 2013 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+Copyright (C) 2013 Aaron VonderHaar
